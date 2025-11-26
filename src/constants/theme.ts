@@ -53,14 +53,12 @@ const typography = {
       fontSize: normalize(20),
       fontWeight: '700' as const,
       lineHeight: normalize(22),
-      letterSpacing: normalize(-0.41),
     },
     nunito18: {
       fontFamily: fonts.nunitoSans,
       fontSize: normalize(18),
       fontWeight: '700' as const,
       lineHeight: normalize(22),
-      letterSpacing: normalize(-0.41),
     },
   },
 
@@ -77,7 +75,6 @@ const typography = {
       fontSize: normalize(16),
       fontWeight: '600' as const,
       lineHeight: normalize(22),
-      letterSpacing: normalize(-0.4),
     },
     regular14: {
       fontFamily: fonts.nunitoSans,
@@ -89,8 +86,6 @@ const typography = {
       fontFamily: fonts.nunitoSans,
       fontSize: normalize(14),
       fontWeight: '700' as const,
-      lineHeight: normalize(15.4),
-      letterSpacing: normalize(-0.41),
     },
   },
 
@@ -101,7 +96,6 @@ const typography = {
       fontSize: normalize(12),
       fontWeight: '600' as const,
       lineHeight: normalize(13.2),
-      letterSpacing: normalize(-0.41),
     },
   },
 
