@@ -17,6 +17,14 @@ end
 target 'BooksLibApp' do
   config = use_native_modules!
 
+  # Enable modular headers for Firebase dependencies to fix Swift pod warnings
+  pod 'FirebaseCoreInternal', :modular_headers => true
+  pod 'FirebaseRemoteConfig', :modular_headers => true
+  pod 'FirebaseABTesting', :modular_headers => true
+  pod 'FirebaseCore', :modular_headers => true
+  pod 'FirebaseInstallations', :modular_headers => true
+  pod 'GoogleUtilities', :modular_headers => true
+
   use_react_native!(
     :path => config[:reactNativePath],
     # An absolute path to your application root.

@@ -1,0 +1,38 @@
+diff --git a/node_modules/react-native-splash-screen/android/build.gradle b/node_modules/react-native-splash-screen/android/build.gradle
+index baef1a9..47b8f3c 100644
+--- a/node_modules/react-native-splash-screen/android/build.gradle
++++ b/node_modules/react-native-splash-screen/android/build.gradle
+@@ -4,17 +4,17 @@ def safeExtGet(prop, fallback) {
+ 
+ apply plugin: 'com.android.library'
+ 
+-def DEFAULT_COMPILE_SDK_VERSION             = 26
+-def DEFAULT_BUILD_TOOLS_VERSION             = "26.0.2"
+-def DEFAULT_TARGET_SDK_VERSION              = 26
+-def DEFAULT_SUPPORT_LIB_VERSION             = "26.1.0"
++def DEFAULT_COMPILE_SDK_VERSION             = 34
++def DEFAULT_BUILD_TOOLS_VERSION             = "34.0.0"
++def DEFAULT_TARGET_SDK_VERSION              = 34
+ 
+ android {
+     compileSdkVersion rootProject.hasProperty('compileSdkVersion') ? rootProject.compileSdkVersion : DEFAULT_COMPILE_SDK_VERSION
+     buildToolsVersion rootProject.hasProperty('buildToolsVersion') ? rootProject.buildToolsVersion : DEFAULT_BUILD_TOOLS_VERSION
++    namespace "org.devio.rn.splashscreen"
+ 
+     defaultConfig {
+-        minSdkVersion safeExtGet('minSdkVersion', 16)
++        minSdkVersion safeExtGet('minSdkVersion', 21)
+         targetSdkVersion rootProject.hasProperty('targetSdkVersion') ? rootProject.targetSdkVersion : DEFAULT_TARGET_SDK_VERSION
+         versionCode 1
+         versionName "1.0"
+@@ -28,10 +28,7 @@ android {
+ }
+ 
+ dependencies {
+-    def supportLibVersion = rootProject.hasProperty('supportLibVersion') ? rootProject.supportLibVersion : DEFAULT_SUPPORT_LIB_VERSION
+-
+     implementation fileTree(dir: 'libs', include: ['*.jar'])
+     testImplementation 'junit:junit:4.12'
+-    implementation "com.android.support:appcompat-v7:$supportLibVersion"
+     implementation "com.facebook.react:react-native:+" // From node_modules
+ }
